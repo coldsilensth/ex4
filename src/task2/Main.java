@@ -2,18 +2,22 @@ package task2;
 
 import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
 
+
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите набор чисел:");
-        String inputLine = new Scanner(System.in).nextLine();
-        HashSet<Integer> hashSet = new HashSet<>();
-        for (int i = 0; i < inputLine.length(); i++) {
-            String n = String.valueOf(inputLine.charAt(i));
-            if (n.matches("[1-9]+")) hashSet.add(Integer.valueOf(n));
+        HashSet<Integer> numbers = new HashSet<>();
+        for (int i = 0; i < 6; i++) {
+            Integer num = scanner.nextInt();
+            numbers.add(num);
+
         }
-        System.out.println(hashSet);
+        System.out.println(numbers);
+
     }
 }
